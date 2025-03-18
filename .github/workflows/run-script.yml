@@ -1,0 +1,24 @@
+name: Run Python Script
+
+on:
+  push: # Запускать каждый раз, когда вы делаете git push
+    branches:
+      - main # Только для ветки main
+
+jobs:
+  run-python-script:
+    runs-on: ubuntu-latest # Среда для выполнения
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3 # Загружает код из репозитория
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.9 
+
+    - name: Install dependencies
+      run: pip install pandas # Устанавливает нужные библиотеки
+
+    - name: Run script
+      run: python analyze_results.py # Запуск скрипта
