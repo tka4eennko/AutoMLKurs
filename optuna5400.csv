@@ -1,0 +1,2 @@
+time_limit,best_model_name,accuracy,precision,recall,f1_score,training_time
+5400,Conv2D_16-128_Dense_128_LR_2.2e-04_DO_0.34,0.72,0.720720991278975,0.72,0.7186527541376766,2480.950968027115
